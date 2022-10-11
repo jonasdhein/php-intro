@@ -115,3 +115,10 @@ if($pessoa1->idade > $pessoa2->idade){
     realize um comando ECHO que consiga mostrar o texto sem as
     marcações em HTML.
 */
+
+$codigoHtml = "<h2>Olá <i>mundo</i></h2>";
+$codigoLimpo = call_user_func("strip_tags", $codigoHtml);
+
+
+echo $codigoHtml;
+echo $codigoLimpo;
