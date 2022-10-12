@@ -40,14 +40,73 @@ var_dump($incrementos);
  */
 fullStackPHPClassSession("comparação", __LINE__);
 
+$varA = 5; //int
+$varB = "5"; //string
+$varC = 4; //int
+
+$comparacoes = [
+    "a == b" => ($varA == $varB), //valor é igual?
+    "a === b" => ($varA === $varB), //valor e tipo são iguais?
+    "a != b" => ($varA != $varB), //valores são diferentes?
+    "a !== b" => ($varA !== $varB), //valores e tipo são diferentes?
+    "a > c" => ($varA > $varC),
+    "a < c" => ($varA < $varC),
+];
+
+var_dump($comparacoes);
+
 
 /**
  * [ lógicos ] https://php.net/manual/pt_BR/language.operators.logical.php
  */
-fullStackPHPClassSession("lógicos", __LINE__);
+fullStackPHPClassSession("operadores lógicos", __LINE__);
 
+$pessoa = new stdClass();
+$pessoa->idade = 18;
+$pessoa->possui_hab = true;
+$pessoa->bebeu = false;
+
+$logicos = [
+    "&&" => ($pessoa->idade >= 18 && $pessoa->possui_hab),
+    "||" => ($pessoa->possui_hab || $pessoa->bebeu),
+];
+
+var_dump($logicos);
 
 /**
  * [ aritiméticos ] https://php.net/manual/pt_BR/language.operators.arithmetic.php
  */
 fullStackPHPClassSession("aritiméticos", __LINE__);
+
+$calcA = 12;
+$calcB = 3;
+
+$calculos = [
+    "a + b" => ($calcA + $calcB),
+    "a - b" => ($calcA - $calcB),
+    "a * b" => ($calcA * $calcB),
+    "a / b" => ($calcA / $calcB),
+    "a % b" => ($calcA % $calcB), //resto da divisão de ambos
+];
+
+var_dump($calculos);
+
+fullStackPHPClassSession("exercícios", __LINE__);
+/*
+    1 - Crie um array com 10 números inteiros e através 
+    de um laço de repetição, diga quantos destes números são
+    pares.
+*/
+
+$numeros = array(2,10,15,20,25);
+$num_pares = 0;
+
+for ($var=0; $var < count($numeros); $var++) { 
+    $valor = $numeros[$var];
+
+    if($valor % 2 == 0){
+        $num_pares++;
+    }
+}
+
+echo "TOTAL DE PARES = " . $num_pares;
