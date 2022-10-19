@@ -58,7 +58,10 @@ $novo_reverse_array = array_reverse($reverse_array, true);
 var_dump($novo_reverse_array);
 
 /*
-    1) 
+    1 - Segue o ARRAY:
+        ["A", "B", "X", "Z", "F", "E", "J", "Ç"]
+        -> Imprima este array de forma alfabética
+        -> Imprima este array de forma alfabética ao contrário 
 */
 
 /*
