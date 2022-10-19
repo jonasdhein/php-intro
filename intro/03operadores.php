@@ -34,7 +34,6 @@ $incrementos = [
 
 var_dump($incrementos);
 
-
 /**
  * [ comparação ] https://php.net/manual/pt_BR/language.operators.comparison.php
  */
@@ -98,7 +97,7 @@ fullStackPHPClassSession("exercícios", __LINE__);
     pares.
 */
 
-$numeros = array(2,10,15,20,25);
+$numeros = array(1,2,3,4,5,6,7,8,9,10);
 $num_pares = 0;
 
 for ($var=0; $var < count($numeros); $var++) { 
